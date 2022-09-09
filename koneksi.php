@@ -9,5 +9,4 @@
     die ("Koneksi dengan database gagal: ".mysql_connect_error());
   }
   
-
 ?>
