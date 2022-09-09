@@ -3,10 +3,17 @@
   
 ?>
 <!DOCTYPE html>
-<html>
-  <head>
-  
-    <style type="text/css">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formulir CWA Pusat</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<script type="text/javascript" src="js/qrcode.js"></script>
+<style type="text/css">
       * {
         font-family: "Trebuchet MS";
       }
@@ -47,30 +54,34 @@
       padding: 20px;
       margin-left: auto;
       margin-right: auto;
-      background: #ededed;
+      background: transparent;
     }
     </style>
   </head>
   <body>
       <center>
-        <h1>Tambah</h1>
+        <h1>Tambah Data</h1>
       <center>
       <form method="POST" action="proses_tambah.php" enctype="multipart/form-data" >
       <section class="base">
         <div>
-          <label>Nama Panjang</label>
-          <input type="text" name="nama_panjang" autofocus="" required="" />
+          <label>Nama Lengkap</label>
+          <input type="text" name="nama_lengkap" autofocus="" required="" />
         </div>
         <div>
           <label>Departemen</label>
-         <input type="text" name="deskripsi" />
+         <input type="text" name="departemen" />
         </div>
         <div>
           <label>Jabatan</label>
-         <input type="text" name="harga_beli" required="" />
+         <input type="text" name="jabatan" required="" />
         </div>
         <div>
-          <label>Gambar QR Code</label>
+          <label>Alamat</label>
+         <input type="text" name="alamat" required="" />
+        </div>
+        <div>
+          <label>Gambar</label>
          <input type="file" name="gambar_qrcode" required="" />
         </div>
         <div>
