@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2022 at 11:57 AM
+-- Generation Time: Sep 09, 2022 at 08:30 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -33,17 +33,19 @@ CREATE TABLE `qrcode` (
   `departemen` varchar(255) DEFAULT NULL,
   `jabatan` varchar(255) DEFAULT NULL,
   `alamat` varchar(255) DEFAULT NULL,
-  `gambar_produk` varchar(255) DEFAULT NULL
+  `gambar_qrcode` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `qrcode`
 --
 
-INSERT INTO `qrcode` (`id`, `nama_lengkap`, `departemen`, `jabatan`, `alamat`, `gambar_produk`) VALUES
+INSERT INTO `qrcode` (`id`, `nama_lengkap`, `departemen`, `jabatan`, `alamat`, `gambar_qrcode`) VALUES
 (13, 'Aditya Maulana Shidiq', 'IT Staff', 'Programing', 'Jl. Suka Maju ', '114-download.png'),
 (14, 'Johan Budi Penemuan', 'Sipil', 'General Affair', 'Jl. Badak Dalam', '452-johan.png'),
-(15, 'Irfan Budi yanto', 'IT', 'IT NOC', 'Jl. Badak Dalam', '940-irfan.png');
+(15, 'Irfan Budi yanto', 'IT', 'IT NOC', 'Jl. Badak Dalam', '940-irfan.png'),
+(16, 'ddfgf', 'dfgdfg', 'fdgdfg', 'dfgdfg', '482-download.png'),
+(18, 'dfdsfdsf', 'sdfds', 'sdfsdf', 'sdfsdf', '894-bentuk formulir.PNG');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `qrcode`
 -- AUTO_INCREMENT for table `qrcode`
 --
 ALTER TABLE `qrcode`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
