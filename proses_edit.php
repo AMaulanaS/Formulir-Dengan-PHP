@@ -4,9 +4,10 @@ include 'koneksi.php';
 
 	// membuat variabel untuk menampung data dari form
   $id = $_POST['id'];
-  $nama_panjang   = $_POST['nama_panjang'];
+  $nama_lengkap   = $_POST['nama_lengkap'];
   $departemen     = $_POST['departemen'];
   $jabatan    = $_POST['jabatan'];
+  $alamat    = $_POST['alamat'];
   $gambar_qrcode = $_FILES['gambar_qrcode']['name'];
   //cek dulu jika merubah gambar produk jalankan coding ini
   if($gambar_qrcode != "") {
@@ -20,7 +21,7 @@ include 'koneksi.php';
                   move_uploaded_file($file_tmp, 'gambar/'.$nama_gambar_baru); //memindah file gambar ke folder gambar
                       
                     // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-                   $query  = "UPDATE qrcode SET nama_panjang = '$nama_lengkap', departemen = '$deskripsi', jabatan = '$harga_jual', gambar_qrcode = '$nama_gambar_baru'";
+                   $query  = "UPDATE qrcode SET nama_lengkap = '$nama_lengkap', departemen = '$departemen', jabatan = '$jabatan', alamat = '$alamat', gambar_qrcode = '$nama_gambar_baru'";
                     $query .= "WHERE id = '$id'";
                     $result = mysqli_query($koneksi, $query);
                     // periska query apakah ada error
@@ -38,7 +39,7 @@ include 'koneksi.php';
               }
     } else {
       // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-      $query  = "UPDATE qrcode SET nama_panjang = '$nama_panjang', departemen = '$departemen', jabatan = '$jabatan'";
+      $query  = "UPDATE qrcode SET nama_lengkap = '$nama_lengkap', departemen = '$departemen', jabatan = '$jabatan', alamat = '$alamat'";
       $query .= "WHERE id = '$id'";
       $result = mysqli_query($koneksi, $query);
       // periska query apakah ada error
